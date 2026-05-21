@@ -38,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} bg-gray-900 text-white`}>{children}</body>
+      <body className={`${inter.className} bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white`}>{children}</body>
     </html>
   )
 }
