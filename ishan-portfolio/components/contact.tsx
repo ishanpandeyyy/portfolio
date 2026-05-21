@@ -43,8 +43,8 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-32 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -52,12 +52,17 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent">
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 mb-8">
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+            <span className="text-cyan-300 text-sm font-semibold">REACH OUT</span>
+          </motion.div>
+
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="text-gradient">
               Get In Touch
             </span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about
             technology and innovation.
           </p>
