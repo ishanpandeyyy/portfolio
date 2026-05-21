@@ -11,6 +11,43 @@ export default function Certifications() {
 
   const certifications = [
     {
+      title: "Google Cloud Certified Professional Cloud Architect",
+      issuer: "Google",
+      instructor: "Google",
+      date: "Mar 30 - May 20, 2025",
+      courses: [
+        "Designing and Planning Cloud Solution Architecture",
+        "Managing and Provisioning Cloud Infrastructure",
+        "Security and Compliance Architecture",
+        "Analyzing and Optimizing Technical and Business Processes",
+        "Managing Cloud Implementations and Operations",
+        "Ensuring Solution and Operations Reliability",
+      ],
+      description:
+        "Comprehensive study of cloud architecture and infrastructure design on Google Cloud Platform, including cloud solution architecture, security and compliance, networking, scalability, cost optimization, and system reliability.",
+      verifyUrl: "https://www.skills.google/public_profiles/3d7b8079-935c-4e79-8a9f-fcb36f62a2b9/badges/24309323?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+      color: "from-red-500 to-yellow-500",
+    },
+    {
+      title: "Machine Learning Specialization",
+      issuer: "University of Washington",
+      instructor: "University of Washington",
+      date: "Feb 2 - May 18, 2025",
+      courses: [
+        "Machine Learning Foundations and Case Study Approaches",
+        "Regression and Classification Algorithms",
+        "Clustering and Unsupervised Learning",
+        "Recommender Systems and Information Retrieval",
+        "Deep Learning and Intelligent Applications",
+        "Feature Engineering, Model Evaluation, and Predictive Analytics",
+        "Practical Implementation of Machine Learning Models in Python",
+      ],
+      description:
+        "Comprehensive study of machine learning concepts and real-world AI applications through practical case studies and hands-on projects from University of Washington. The specialization covered predictive modeling, classification, clustering, information retrieval, recommender systems, and deep learning techniques using Python.",
+      verifyUrl: "https://www.coursera.org/account/accomplishments/specialization/P4KWY17SAD2Y",
+      color: "from-green-500 to-teal-500",
+    },
+    {
       title: "Machine Learning Specialization",
       issuer: "DeepLearning.AI",
       instructor: "Andrew Ng",
@@ -90,63 +127,81 @@ export default function Certifications() {
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 50, rotateX: -10 }}
+              animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -10 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group"
+              whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0, 0, 0, 0.3)" }}
+              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group relative overflow-hidden"
               data-cursor-hover
             >
-              <div className="flex items-start justify-between mb-4">
-                <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex items-center text-sm text-gray-400">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  {cert.date}
-                </div>
+              {/* Animated border gradient on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-purple-500/10 blur-lg"></div>
               </div>
 
-              <h3 className="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
-                {cert.title}
-              </h3>
-
-              <div className="mb-3">
-                <p className="text-cyan-400 font-medium">{cert.issuer}</p>
-                <p className="text-gray-400 text-sm">Instructor: {cert.instructor}</p>
-              </div>
-
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed">{cert.description}</p>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-300 mb-2">Course Content:</h4>
-                <div className="space-y-1">
-                  {cert.courses.map((course, courseIndex) => (
-                    <div key={courseIndex} className="text-sm text-gray-400 flex items-start">
-                      <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                      {course}
-                    </div>
-                  ))}
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-4">
+                  <motion.div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    animate={{ boxShadow: ["0 0 0 0 rgba(139, 92, 246, 0.7)", "0 0 0 10px rgba(139, 92, 246, 0)"] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <Award className="w-6 h-6 text-white" />
+                  </motion.div>
+                  <motion.div className="flex items-center text-sm text-gray-400">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {cert.date}
+                  </motion.div>
                 </div>
+
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  {cert.title}
+                </h3>
+
+                <div className="mb-3">
+                  <p className="text-cyan-400 font-medium">{cert.issuer}</p>
+                  <p className="text-gray-400 text-sm">Instructor: {cert.instructor}</p>
+                </div>
+
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{cert.description}</p>
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Course Content:</h4>
+                  <div className="space-y-1">
+                    {cert.courses.map((course, courseIndex) => (
+                      <motion.div
+                        key={courseIndex}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 + courseIndex * 0.05 }}
+                        className="text-sm text-gray-400 flex items-start"
+                      >
+                        <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        {course}
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {cert.credits && <p className="text-sm text-gray-400 mb-2">Credits: {cert.credits}</p>}
+
+                {cert.rollNo && <p className="text-sm text-gray-400 mb-4">Roll No: {cert.rollNo}</p>}
+
+                {cert.verifyUrl && (
+                  <motion.a
+                    href={cert.verifyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 text-sm font-medium"
+                    data-cursor-hover
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Verify Certificate
+                  </motion.a>
+                )}
               </div>
-
-              {cert.credits && <p className="text-sm text-gray-400 mb-2">Credits: {cert.credits}</p>}
-
-              {cert.rollNo && <p className="text-sm text-gray-400 mb-4">Roll No: {cert.rollNo}</p>}
-
-              {cert.verifyUrl && (
-                <a
-                  href={cert.verifyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 text-sm font-medium"
-                  data-cursor-hover
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Verify Certificate
-                </a>
-              )}
             </motion.div>
           ))}
         </div>
