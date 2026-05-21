@@ -21,8 +21,8 @@ export default function Hero() {
     }
   }, [currentIndex, fullText])
 
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -71,7 +71,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.2 }}
           >
             <button
-              onClick={scrollToAbout}
+              onClick={scrollToProjects}
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               data-cursor-hover
             >

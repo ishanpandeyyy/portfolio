@@ -63,18 +63,13 @@ export default function About() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Hey! My name is Ishan Pandey, and I'm a passionate tech enthusiast with a strong focus on AI, machine
-              learning, Linux systems, and algorithmic trading. I'm currently pursuing a B.Tech in Computer Science with
-              a specialization in AI/ML.
+              Hi, I&apos;m Ishan Pandey — a Computer Science Engineering student specializing in AI and Machine Learning, researcher, and tech enthusiast passionate about building intelligent systems that solve real-world problems. My interests span across artificial intelligence, machine learning, Linux systems, algorithmic trading, and modern software development.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I aspire to build intelligent systems that blend data, logic, and creativity to solve real-world
-              challenges and push the boundaries of innovation.
+              As a researcher, I&apos;ve also contributed to published research work in the field of technology and innovation, reflecting my passion for exploring advanced concepts and turning ideas into impactful solutions.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not immersed in code or research, you'll find me analyzing crypto market charts like a strategist
-              solving a riddle or channeling creativity through the strings of an electric guitar and the keys of a
-              piano.
+              I enjoy combining logic, creativity, and data to develop meaningful projects, from AI-powered applications to analytical trading systems. Beyond technology, I&apos;m deeply connected to music and creativity — whether analyzing market trends, experimenting with new ideas, or playing the electric guitar and piano, I&apos;m always driven by curiosity and continuous growth.
             </p>
           </div>
         </motion.div>
