@@ -183,21 +183,7 @@ export default function FuturisticSkills() {
                 {/* Description */}
                 <p className="text-sm text-gray-300 mb-6">{skill.description}</p>
 
-                {/* Animated Progress Bar */}
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">Proficiency</span>
-                    <span className="text-sm font-bold text-cyan-400">{skill.level}%</span>
-                  </div>
-                  <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden border border-cyan-500/20">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1.5, ease: 'easeOut', delay: index * 0.1 }}
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
-                    />
-                  </div>
-                </div>
+
 
                 {/* Divider */}
                 <div className="h-px bg-gradient-to-r from-cyan-500/0 via-cyan-500/30 to-cyan-500/0" />

@@ -118,9 +118,9 @@ export default function FuturisticProjects() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12"
         >
-          {projects.slice(0, 4).map((project, index) => {
+          {projects.slice(0, 3).map((project, index) => {
             const IconComponent = project.icon
             return (
               <motion.div
@@ -153,16 +153,7 @@ export default function FuturisticProjects() {
                       </div>
                     </motion.div>
 
-                    <div className="flex items-center gap-2">
-                      <motion.div
-                        className="px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-xs font-semibold text-cyan-300"
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        transition={{ delay: index * 0.1 + 0.2 }}
-                      >
-                        +{project.xp}XP
-                      </motion.div>
-                    </div>
+
                   </div>
 
                   {/* Title and status */}
@@ -236,18 +227,21 @@ export default function FuturisticProjects() {
           })}
         </motion.div>
 
-        {/* Single centered project card */}
-        {(() => {
-          const project = projects[4]
-          const IconComponent = project.icon
-          return (
+        {/* Two centered project cards */}
         <motion.div
-          variants={itemVariants}
+          variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          transition={{ delay: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
+        >
+          {projects.slice(3, 5).map((project, index) => {
+            const IconComponent = project.icon
+            return (
+        <motion.div
+          key={project.title}
+          variants={itemVariants}
           whileHover={{ y: -12, transition: { duration: 0.3 } }}
-          className="group relative max-w-md mx-auto"
+          className="group relative"
         >
 
           {/* Glow background */}
@@ -274,16 +268,7 @@ export default function FuturisticProjects() {
                 </div>
               </motion.div>
 
-              <div className="flex items-center gap-2">
-                <motion.div
-                  className="px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-xs font-semibold text-green-300"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  +{project.xp}XP
-                </motion.div>
-              </div>
+
             </div>
 
             {/* Title and status */}
@@ -351,10 +336,11 @@ export default function FuturisticProjects() {
                 </motion.a>
               )}
             </div>
-          </div>
+                </div>
+              </motion.div>
+            )
+          })}
         </motion.div>
-          )
-        })()}
       </div>
     </section>
   )

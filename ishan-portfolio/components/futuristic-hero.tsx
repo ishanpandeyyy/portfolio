@@ -2,9 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight, Code2, Brain, Zap } from 'lucide-react'
-import { GamificationWidget } from './gamification-system'
 
 export function FuturisticHero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,13 +47,12 @@ export function FuturisticHero() {
           animate="visible"
           className="text-center mb-16"
         >
-          {/* Glowing badge */}
+          {/* Name */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 mb-8"
+            className="mb-8"
           >
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-            <span className="text-cyan-300 text-sm font-semibold">AI Engineer / Researcher</span>
+            <p className="text-lg md:text-2xl font-bold text-cyan-300 tracking-widest">ISHAN PANDEY</p>
           </motion.div>
 
           {/* Main heading */}
@@ -75,7 +80,10 @@ export function FuturisticHero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
           >
-            <button className="group relative px-8 py-4 rounded-lg font-semibold text-white overflow-hidden">
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="group relative px-8 py-4 rounded-lg font-semibold text-white overflow-hidden"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 group-hover:from-cyan-500 group-hover:to-blue-500 px-8 py-4 rounded-lg transition-all duration-300">
                 Explore Projects
@@ -83,8 +91,11 @@ export function FuturisticHero() {
               </div>
             </button>
 
-            <button className="group px-8 py-4 rounded-lg font-semibold text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10">
-              View Research
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="group px-8 py-4 rounded-lg font-semibold text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10"
+            >
+              Contact Us
             </button>
           </motion.div>
         </motion.div>
@@ -113,13 +124,7 @@ export function FuturisticHero() {
           })}
         </motion.div>
 
-        {/* Gamification Widget */}
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-center"
-        >
-          <GamificationWidget />
-        </motion.div>
+
 
         {/* Floating elements */}
         <motion.div
