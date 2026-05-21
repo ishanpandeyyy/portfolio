@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { Mail, Github, Linkedin } from "lucide-react"
+import { Mail, Github, Linkedin, BookOpen } from "lucide-react"
 import ContactForm from "./contact-form"
 
 export default function Contact() {
@@ -32,6 +32,13 @@ export default function Contact() {
       value: "linkedin.com/in/ishanpandeyy",
       href: "https://www.linkedin.com/in/ishanpandeyy/",
       color: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: BookOpen,
+      label: "Google Scholar",
+      value: "scholar.google.com/citations",
+      href: "https://scholar.google.com/citations?user=PhyCKsMAAAAJ&hl=en",
+      color: "from-indigo-500 to-purple-500",
     },
   ]
 
