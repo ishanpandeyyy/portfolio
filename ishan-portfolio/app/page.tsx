@@ -8,7 +8,7 @@ import { FuturisticBackground } from "../components/futuristic-background"
 import About from "../components/about"
 import Certifications from "../components/certifications"
 import Publications from "../components/publications"
-import Projects from "../components/projects"
+import FuturisticProjects from "../components/futuristic-projects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
@@ -48,7 +48,7 @@ export default function Home() {
         <About />
         <Certifications />
         <Publications />
-        <Projects />
+        <FuturisticProjects />
         <Contact />
       </main>
 
