@@ -6,8 +6,9 @@ import AnimatedCursor from "../components/animated-cursor"
 import { FuturisticHero } from "../components/futuristic-hero"
 import { FuturisticBackground } from "../components/futuristic-background"
 import About from "../components/about"
+import FuturisticSkills from "../components/futuristic-skills"
 import Certifications from "../components/certifications"
-import Publications from "../components/publications"
+import FuturisticTimeline from "../components/futuristic-timeline"
 import FuturisticProjects from "../components/futuristic-projects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
@@ -46,8 +47,9 @@ export default function Home() {
       <main className="relative z-10">
         <FuturisticHero />
         <About />
+        <FuturisticSkills />
         <Certifications />
-        <Publications />
+        <FuturisticTimeline />
         <FuturisticProjects />
         <Contact />
       </main>
