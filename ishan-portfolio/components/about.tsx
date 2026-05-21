@@ -63,7 +63,7 @@ export default function About() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Hi, I&apos;m Ishan Pandey — a Computer Science Engineering student specializing in AI and Machine Learning, researcher, and tech enthusiast passionate about building intelligent systems that solve real-world problems. My interests span across artificial intelligence, machine learning, Linux systems, algorithmic trading, and modern software development.
+              Hi, I&apos;m Ishan Pandey — a Computer Science Engineering specializing in AI and Machine Learning, researcher, and tech enthusiast passionate about building intelligent systems that solve real-world problems. My interests span across artificial intelligence, machine learning, Linux systems, algorithmic trading, and modern software development.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
               As a researcher, I&apos;ve also contributed to published research work in the field of technology and innovation, reflecting my passion for exploring advanced concepts and turning ideas into impactful solutions.
