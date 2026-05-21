@@ -64,7 +64,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             {contactInfo.map((contact, index) => {
               const IconComponent = contact.icon
               return (
@@ -76,7 +76,7 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group text-center hover:transform hover:scale-105"
+                  className="w-full md:w-1/3 lg:w-1/4 min-w-[250px] bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group text-center hover:transform hover:scale-105"
                   data-cursor-hover
                 >
                   <div

@@ -83,9 +83,10 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
           {projects.map((project, index) => {
             const IconComponent = project.icon
+            const isLastItemAlone = projects.length % 3 === 2 && index === projects.length - 1
             return (
               <motion.div
                 key={project.title}
@@ -93,7 +94,7 @@ export default function Projects() {
                 animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -10 }}
                 transition={{ duration: 0.8, delay: index * 0.15 }}
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.4)" }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group relative overflow-hidden"
+                className={`w-full max-w-sm bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 group relative overflow-hidden ${isLastItemAlone ? "lg:col-span-2 lg:max-w-sm xl:col-span-1 xl:col-start-2" : ""}`}
                 data-cursor-hover
               >
                 {/* Animated gradient background on hover */}
