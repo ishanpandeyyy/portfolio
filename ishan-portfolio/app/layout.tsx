@@ -1,8 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Poppins, Inter } from "next/font/google"
 import "./globals.css"
 
+const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] })
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white`}>{children}</body>
+      <body className={`${poppins.className} bg-gradient-to-br from-white via-blue-50 to-purple-50 text-gray-900`}>{children}</body>
     </html>
   )
 }

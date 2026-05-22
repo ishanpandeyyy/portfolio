@@ -2,14 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
-import AnimatedCursor from "../components/animated-cursor"
-import { FuturisticHero } from "../components/futuristic-hero"
-import { FuturisticBackground } from "../components/futuristic-background"
+import LightHero from "../components/light-hero"
 import About from "../components/about"
-import FuturisticSkills from "../components/futuristic-skills"
+import LightSkills from "../components/light-skills"
 import Certifications from "../components/certifications"
-import FuturisticTimeline from "../components/futuristic-timeline"
-import FuturisticProjects from "../components/futuristic-projects"
+import LightProjects from "../components/light-projects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
@@ -32,25 +29,21 @@ export default function Home() {
   }
 
   return (
-    <div className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-x-hidden">
-      <FuturisticBackground />
-      <AnimatedCursor />
-
+    <div className="relative bg-white text-gray-900 overflow-x-hidden">
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-blue-500 to-purple-600 z-50 origin-left"
         style={{ scaleX }}
       />
 
       <Navigation />
 
       <main className="relative z-10">
-        <FuturisticHero />
+        <LightHero />
         <About />
-        <FuturisticSkills />
+        <LightSkills />
         <Certifications />
-        <FuturisticTimeline />
-        <FuturisticProjects />
+        <LightProjects />
         <Contact />
       </main>
 

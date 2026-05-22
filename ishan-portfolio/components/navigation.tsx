@@ -43,34 +43,29 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-40 bg-gray-900/80 backdrop-blur-md border-b border-gray-800"
+      className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
+            className="text-xl font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent"
           >
             Ishan Pandey
           </motion.div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center gap-2 p-1 bg-gray-100 rounded-full">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  activeSection === item.id ? "text-cyan-400" : "text-gray-300 hover:text-white"
+                className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+                  activeSection === item.id 
+                    ? "bg-blue-500 text-white shadow-md" 
+                    : "text-gray-700 hover:text-blue-600"
                 }`}
-                data-cursor-hover
               >
                 {item.label}
-                {activeSection === item.id && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500"
-                  />
-                )}
               </button>
             ))}
           </div>
