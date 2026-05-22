@@ -52,7 +52,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 mb-8">
+          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-cyan-500/10 mb-8">
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
             <span className="text-cyan-300 text-sm font-semibold">REACH OUT</span>
           </motion.div>
@@ -62,7 +62,7 @@ export default function Contact() {
               Get In Touch
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about
             technology and innovation.
           </p>
@@ -81,7 +81,7 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="w-full md:w-1/3 lg:w-1/4 min-w-[250px] bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group text-center hover:transform hover:scale-105"
+                  className="w-full md:w-1/3 lg:w-1/4 min-w-[250px] bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-gray-300 hover:border-gray-400 transition-all duration-300 group text-center hover:transform hover:scale-105"
                   data-cursor-hover
                 >
                   <div
@@ -94,7 +94,7 @@ export default function Contact() {
                     {contact.label}
                   </h3>
 
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">{contact.value}</p>
+                  <p className="text-gray-700 group-hover:text-white transition-colors duration-300">{contact.value}</p>
                 </motion.a>
               )
             })}
@@ -104,11 +104,11 @@ export default function Contact() {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+            className="bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-gray-300"
           >
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4 text-white">Ready to collaborate?</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-700 mb-6">
                 Whether you have a project in mind, want to discuss AI/ML solutions, or just want to connect, I'd love
                 to hear from you.
               </p>

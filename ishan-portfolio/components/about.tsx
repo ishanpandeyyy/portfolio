@@ -14,37 +14,37 @@ export default function About() {
       category: "Programming Languages",
       items: ["Python", "C++", "JavaScript", "HTML/CSS", "React"],
       icon: Code,
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-400 to-pink-400",
     },
     {
       category: "AI/ML",
       items: ["Machine Learning", "Deep Learning", "Natural Language Processing"],
       icon: Brain,
-      color: "from-cyan-500 to-blue-500",
+      color: "from-blue-400 to-cyan-400",
     },
     {
       category: "Systems",
       items: ["Linux (Ubuntu, Kali)", "Shell Scripting", "Bash", "Git"],
       icon: Terminal,
-      color: "from-green-500 to-teal-500",
+      color: "from-green-400 to-teal-400",
     },
     {
       category: "Security",
       items: ["Cybersecurity Fundamentals", "Ethical Hacking (Beginner)"],
       icon: Shield,
-      color: "from-red-500 to-orange-500",
+      color: "from-red-400 to-orange-400",
     },
     {
       category: "Trading & Automation",
       items: ["Pine Script", "Smart Money Concepts", "Algo Bot Development"],
       icon: TrendingUp,
-      color: "from-yellow-500 to-orange-500",
+      color: "from-yellow-400 to-orange-400",
     },
     {
       category: "Other",
       items: ["Web Scraping", "API Integration", "Chatbot Frameworks", "Digital Marketing and SEO"],
       icon: Database,
-      color: "from-indigo-500 to-purple-500",
+      color: "from-indigo-400 to-purple-400",
     },
   ]
 
@@ -58,17 +58,17 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent">About Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            About Me
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               Hi, I&apos;m Ishan Pandey — a Computer Science Engineer specializing in AI and Machine Learning, researcher, and tech enthusiast passionate about building intelligent systems that solve real-world problems. My interests span across artificial intelligence, machine learning, Linux systems, algorithmic trading, and modern software development.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
               As a researcher, I&apos;ve also contributed to published research work in the field of technology and innovation, reflecting my passion for exploring advanced concepts and turning ideas into impactful solutions.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed">
               I enjoy combining logic, creativity, and data to develop meaningful projects, from AI-powered applications to analytical trading systems. Beyond technology, I&apos;m deeply connected to music and creativity — whether analyzing market trends, experimenting with new ideas, or playing the electric guitar and piano, I&apos;m always driven by curiosity and continuous growth.
             </p>
           </div>
@@ -83,8 +83,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group"
-                data-cursor-hover
+                className="card p-6 group hover:shadow-lg"
               >
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
@@ -92,7 +91,7 @@ export default function About() {
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                   {skill.category}
                 </h3>
 
@@ -100,7 +99,7 @@ export default function About() {
                   {skill.items.map((item, itemIndex) => (
                     <span
                       key={itemIndex}
-                      className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 border border-gray-600 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
+                      className="px-3 py-1 bg-blue-50 rounded-full text-sm text-blue-700 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition-all duration-300"
                     >
                       {item}
                     </span>

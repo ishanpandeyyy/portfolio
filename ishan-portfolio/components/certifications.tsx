@@ -26,7 +26,7 @@ export default function Certifications() {
       description:
         "Comprehensive study of cloud architecture and infrastructure design on Google Cloud Platform, including cloud solution architecture, security and compliance, networking, scalability, cost optimization, and system reliability.",
       verifyUrl: "https://www.skills.google/public_profiles/3d7b8079-935c-4e79-8a9f-fcb36f62a2b9/badges/24309323?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-      color: "from-red-500 to-yellow-500",
+      color: "from-red-400 to-yellow-400",
     },
     {
       title: "Machine Learning Specialization",
@@ -45,7 +45,7 @@ export default function Certifications() {
       description:
         "Comprehensive study of machine learning concepts and real-world AI applications through practical case studies and hands-on projects from University of Washington. The specialization covered predictive modeling, classification, clustering, information retrieval, recommender systems, and deep learning techniques using Python.",
       verifyUrl: "https://www.coursera.org/account/accomplishments/specialization/P4KWY17SAD2Y",
-      color: "from-green-500 to-teal-500",
+      color: "from-green-400 to-teal-400",
     },
     {
       title: "Machine Learning Specialization",
@@ -60,7 +60,7 @@ export default function Certifications() {
       description:
         "Comprehensive study of modern machine learning concepts including supervised learning, unsupervised learning, recommender systems, and reinforcement learning.",
       verifyUrl: "https://coursera.org/verify/specialization/U2EX7QP8J918",
-      color: "from-blue-500 to-indigo-500",
+      color: "from-blue-400 to-indigo-400",
     },
     {
       title: "Cloud Computing",
@@ -72,7 +72,7 @@ export default function Certifications() {
       credits: "3-4 credits recommended",
       rollNo: "30816",
       verifyUrl: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS118S157020117304431181",
-      color: "from-cyan-500 to-blue-500",
+      color: "from-cyan-400 to-blue-400",
     },
     {
       title: "Programming in C++: A Hands-on Introduction",
@@ -87,7 +87,7 @@ export default function Certifications() {
       ],
       description: "Comprehensive C++ programming specialization covering fundamentals to object-oriented design.",
       verifyUrl: "https://coursera.org/verify/specialization/5SX55VZ8AE6K",
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-400 to-pink-400",
     },
     {
       title: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
@@ -98,7 +98,7 @@ export default function Certifications() {
       description:
         "Advanced study of algorithmic techniques including divide and conquer, sorting, searching, and randomized algorithms.",
       verifyUrl: "https://coursera.org/verify/52MSMGDNMCJZ",
-      color: "from-red-500 to-orange-500",
+      color: "from-red-400 to-orange-400",
     },
   ]
 
@@ -112,12 +112,10 @@ export default function Certifications() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent">
-              Certifications
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            Certifications
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Professional certifications and specialized courses that demonstrate my commitment to continuous learning
             and expertise in various domains.
           </p>
@@ -130,13 +128,12 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 50, rotateX: -10 }}
               animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -10 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0, 0, 0, 0.3)" }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 group relative overflow-hidden"
-              data-cursor-hover
+              whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0, 0, 0, 0.1)" }}
+              className="card p-6 group relative overflow-hidden"
             >
               {/* Animated border gradient on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-purple-500/10 blur-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 blur-lg"></div>
               </div>
 
               <div className="relative z-10">

@@ -12,7 +12,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative py-16 border-t border-cyan-500/20 mt-12">
+    <footer className="relative py-16 border-t border-blue-500/20 mt-12">
       {/* Glow effect */}
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" />
 
@@ -32,7 +32,7 @@ export default function Footer() {
           >
             <span className="text-gradient">Connect & Collaborate</span>
           </motion.h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
             Ready to build something extraordinary? Reach out and let's create intelligent solutions together.
           </p>
 
@@ -50,7 +50,7 @@ export default function Footer() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.2, y: -5 }}
-                  className="group relative w-12 h-12 rounded-full bg-gray-800 border border-cyan-500/20 flex items-center justify-center hover:border-cyan-500 transition-all duration-300"
+                  className="group relative w-12 h-12 rounded-full bg-white border border-blue-500/20 flex items-center justify-center hover:border-blue-500 transition-all duration-300"
                 >
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
                   <Icon className="w-5 h-5 text-cyan-400 relative z-10 group-hover:text-cyan-300 transition-colors" />
@@ -69,7 +69,7 @@ export default function Footer() {
             transition={{ delay: 0.4 }}
             className="space-y-2"
           >
-            <p className="text-gray-300">
+            <p className="text-gray-700">
               © 2025 Ishan Pandey. Built with <span className="text-cyan-400 font-semibold">Next.js</span>, <span className="text-cyan-400 font-semibold">Tailwind CSS</span>, and <span className="text-cyan-400 font-semibold">Framer Motion</span>.
             </p>
             <p className="text-gray-400 text-sm">
@@ -83,7 +83,7 @@ export default function Footer() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-3 gap-4 text-center pt-8 border-t border-cyan-500/10"
+          className="grid grid-cols-3 gap-4 text-center pt-8 border-t border-blue-500/10"
         >
           <div>
             <p className="text-2xl font-bold text-cyan-400">12</p>
