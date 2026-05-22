@@ -2,49 +2,43 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { Mail, Github, Linkedin, BookOpen } from "lucide-react"
-import ContactForm from "./contact-form"
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [isFormOpen, setIsFormOpen] = useState(false)
 
-  const contactInfo = [
+  const contactLinks = [
     {
       icon: Mail,
-      label: "Email",
-      value: "ishanpandey2803@gmail.com",
+      name: "Email",
       href: "mailto:ishanpandey2803@gmail.com",
-      color: "from-red-500 to-pink-500",
+      color: "from-red-400 to-pink-400",
     },
     {
       icon: Github,
-      label: "GitHub",
-      value: "github.com/ishanpandeyyy",
+      name: "GitHub",
       href: "https://github.com/ishanpandeyyy",
-      color: "from-gray-500 to-gray-700",
+      color: "from-gray-400 to-gray-600",
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/ishanpandeyy",
+      name: "LinkedIn",
       href: "https://www.linkedin.com/in/ishanpandeyy/",
-      color: "from-blue-500 to-blue-700",
+      color: "from-blue-400 to-blue-600",
     },
     {
       icon: BookOpen,
-      label: "Google Scholar",
-      value: "scholar.google.com/citations",
+      name: "Google Scholar",
       href: "https://scholar.google.com/citations?user=PhyCKsMAAAAJ&hl=en",
-      color: "from-indigo-500 to-purple-500",
+      color: "from-purple-400 to-indigo-400",
     },
   ]
 
   return (
-    <section id="contact" className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -52,80 +46,63 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-cyan-500/10 mb-8">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-            <span className="text-cyan-300 text-sm font-semibold">REACH OUT</span>
-          </motion.div>
-
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">
-              Get In Touch
-            </span>
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about
-            technology and innovation.
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            I&apos;m always open to discussing new opportunities, interesting projects, and innovations in technology.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {contactInfo.map((contact, index) => {
-              const IconComponent = contact.icon
-              return (
-                <motion.a
-                  key={contact.label}
-                  href={contact.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="w-full md:w-1/3 lg:w-1/4 min-w-[250px] bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-gray-300 hover:border-gray-400 transition-all duration-300 group text-center hover:transform hover:scale-105"
-                  data-cursor-hover
-                >
-                  <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-r ${contact.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
-                    {contact.label}
-                  </h3>
-
-                  <p className="text-gray-700 group-hover:text-white transition-colors duration-300">{contact.value}</p>
-                </motion.a>
-              )
-            })}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-gray-300"
-          >
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4 text-white">Ready to collaborate?</h3>
-              <p className="text-gray-700 mb-6">
-                Whether you have a project in mind, want to discuss AI/ML solutions, or just want to connect, I'd love
-                to hear from you.
-              </p>
-              <button
-                onClick={() => setIsFormOpen(true)}
-                className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                data-cursor-hover
+        {/* Contact buttons grid */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
+        >
+          {contactLinks.map((contact, index) => {
+            const IconComponent = contact.icon
+            return (
+              <motion.a
+                key={contact.name}
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="card p-6 flex flex-col items-center text-center group hover:shadow-lg transition-all"
               >
-                <Mail className="w-5 h-5" />
-                Send me an email
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${contact.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <IconComponent className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  {contact.name}
+                </h3>
+              </motion.a>
+            )
+          })}
+        </motion.div>
 
-      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+        {/* Call to action section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 text-center"
+        >
+          <p className="text-gray-700 text-lg mb-6">
+            Choose any platform above to connect with me or start a conversation
+          </p>
+          <motion.a
+            href="mailto:ishanpandey2803@gmail.com"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+          >
+            <Mail className="w-5 h-5" />
+            Contact Me Now
+          </motion.a>
+        </motion.div>
+      </div>
     </section>
   )
 }

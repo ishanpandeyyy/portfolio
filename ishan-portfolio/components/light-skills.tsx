@@ -131,16 +131,7 @@ export default function LightSkills() {
                 {skill.description}
               </p>
 
-              {/* Collectible badge effect */}
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500 font-semibold mb-2">MASTERY LEVEL</p>
-                <div className="flex items-center gap-2">
-                  <span className="inline-block w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-400 text-white text-xs font-bold flex items-center justify-center">
-                    ⭐
-                  </span>
-                  <span className="text-sm font-semibold text-gray-900">Expert</span>
-                </div>
-              </div>
+
             </motion.div>
           ))}
         </motion.div>
