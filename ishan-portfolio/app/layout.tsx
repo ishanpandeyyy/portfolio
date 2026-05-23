@@ -39,7 +39,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`${poppins.className} bg-gradient-to-br from-white via-blue-50 to-purple-50 text-gray-900`}>{children}</body>
+      <body className={`${poppins.className} bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900 text-white`}>{children}</body>
     </html>
   )
 }

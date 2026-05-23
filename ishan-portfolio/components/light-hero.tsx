@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ChevronRight, Sparkles, Award, Code2 } from 'lucide-react'
+import { ChevronRight, Zap, Award, Rocket } from 'lucide-react'
 
 export default function LightHero() {
   const scrollToSection = (sectionId: string) => {
@@ -31,165 +31,95 @@ export default function LightHero() {
     },
   }
 
-  const floatingVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: 0.4 },
-    },
-  }
-
   return (
     <section id="hero" className="relative pt-32 pb-20 px-4 overflow-hidden">
-      {/* Floating background decorations */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" />
-      <div className="absolute bottom-0 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-40 left-1/2 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }} />
+      {/* Animated background - Dark arcade theme */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Gold accent glow */}
+        <div className="absolute top-20 right-10 w-96 h-96 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" style={{ animationDelay: '2s' }} />
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(249,188,5,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(249,188,5,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="text-center space-y-8"
         >
-          {/* Left content */}
-          <div className="space-y-6">
-            {/* Badge */}
-            <motion.div variants={itemVariants}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 border border-yellow-300">
-                <Sparkles className="w-4 h-4 text-yellow-600" />
-                <span className="text-sm font-semibold text-yellow-800">Welcome to my portfolio</span>
-              </div>
-            </motion.div>
+          {/* Gold accent badge */}
+          <motion.div variants={itemVariants}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10">
+              <Zap className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm font-bold text-yellow-400">Arcade Developer Portfolio</span>
+            </div>
+          </motion.div>
 
-            {/* Main heading */}
-            <motion.h1
-              variants={itemVariants}
-              className="text-5xl lg:text-6xl font-bold leading-tight"
-            >
-              <span className="text-gray-900">ISHAN PANDEY</span>
-              <br />
+          {/* Main heading with gold */}
+          <motion.div variants={itemVariants} className="space-y-4">
+            <p className="text-xl font-semibold text-yellow-400 tracking-wider">ISHAN PANDEY</p>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="text-gradient">AI/ML Engineer</span>
-            </motion.h1>
+              <br />
+              <span className="text-white">& Developer</span>
+            </h1>
+          </motion.div>
 
-            {/* Subheading */}
-            <motion.p
-              variants={itemVariants}
-              className="text-xl text-gray-600 max-w-lg leading-relaxed"
-            >
-              Researcher • Developer • Cloud & Trading Systems Enthusiast
-            </motion.p>
-
-            {/* Description */}
-            <motion.p
-              variants={itemVariants}
-              className="text-gray-700 text-lg max-w-lg leading-relaxed"
-            >
-              Passionate about building intelligent systems, conducting AI research, and solving complex problems through elegant code and innovative thinking.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 pt-4"
-            >
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="btn-primary flex items-center justify-center gap-2"
-              >
-                Explore Projects
-                <ChevronRight className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="btn-secondary"
-              >
-                Contact Me
-              </button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              variants={itemVariants}
-              className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-300"
-            >
-              <div className="text-center">
-                <p className="text-3xl font-bold text-blue-600">5+</p>
-                <p className="text-sm text-gray-600 mt-1">Major Projects</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-purple-600">6+</p>
-                <p className="text-sm text-gray-600 mt-1">Certifications</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-orange-600">15+</p>
-                <p className="text-sm text-gray-600 mt-1">Tech Skills</p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right side visual - Dashboard card */}
-          <motion.div
-            variants={floatingVariants}
-            className="hidden lg:block"
+          {/* Subheading */}
+          <motion.p
+            variants={itemVariants}
+            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            <div className="card p-8 space-y-6">
-              {/* Header */}
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-gray-900">Mission Dashboard</h3>
-                <Award className="w-6 h-6 text-yellow-500" />
-              </div>
+            Researcher • Developer • Cloud Systems • Trading Algorithms • Linux Specialist
+          </motion.p>
 
-              {/* Achievement items */}
-              <div className="space-y-4">
-                <motion.div
-                  variants={itemVariants}
-                  className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg border border-blue-200"
-                >
-                  <Code2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Full-Stack Developer</p>
-                    <p className="text-sm text-gray-600">Expert in modern web & ML stacks</p>
-                  </div>
-                </motion.div>
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            Building intelligent systems that solve real-world problems. Passionate about AI research, elegant code, and continuous innovation.
+          </motion.p>
 
-                <motion.div
-                  variants={itemVariants}
-                  className="flex items-start gap-4 p-4 bg-purple-50 rounded-lg border border-purple-200"
-                >
-                  <Award className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Certified Researcher</p>
-                    <p className="text-sm text-gray-600">Published AI/ML research</p>
-                  </div>
-                </motion.div>
+          {/* CTA Buttons */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
+          >
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="btn-primary inline-flex items-center justify-center gap-2"
+            >
+              Explore Projects
+              <ChevronRight className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="btn-secondary inline-flex items-center justify-center gap-2"
+            >
+              Get In Touch
+              <Rocket className="w-5 h-5" />
+            </button>
+          </motion.div>
 
-                <motion.div
-                  variants={itemVariants}
-                  className="flex items-start gap-4 p-4 bg-green-50 rounded-lg border border-green-200"
-                >
-                  <Sparkles className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Problem Solver</p>
-                    <p className="text-sm text-gray-600">Building intelligent solutions</p>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Progress bar */}
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-sm font-semibold text-gray-900 mb-3">Career Progress</p>
-                <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: '75%' }}
-                    transition={{ duration: 2, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 rounded-full"
-                  />
-                </div>
-              </div>
+          {/* Stats - No judgment metrics */}
+          <motion.div
+            variants={itemVariants}
+            className="grid grid-cols-3 gap-4 md:gap-8 pt-12 border-t border-yellow-500/20"
+          >
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-yellow-400">5+</p>
+              <p className="text-sm text-gray-400">Projects Built</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-yellow-400">6+</p>
+              <p className="text-sm text-gray-400">Certifications</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-yellow-400">15+</p>
+              <p className="text-sm text-gray-400">Tech Skills</p>
             </div>
           </motion.div>
         </motion.div>
