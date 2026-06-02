@@ -42,26 +42,26 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm"
+      className="fixed top-0 left-0 right-0 z-40 bg-transparent backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent"
+            className="text-xl font-bold text-yellow-400"
           >
             Ishan Pandey
           </motion.div>
 
-          <div className="hidden md:flex items-center gap-2 p-1 bg-gray-100 rounded-full">
+          <div className="hidden md:flex items-center gap-2 p-1 bg-slate-800/50 rounded-full border border-yellow-500/20">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                   activeSection === item.id 
-                    ? "bg-blue-500 text-white shadow-md" 
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "bg-yellow-500 text-slate-900 shadow-lg shadow-yellow-500/50" 
+                    : "text-white/80 hover:text-yellow-400"
                 }`}
               >
                 {item.label}

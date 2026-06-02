@@ -119,7 +119,7 @@ export default function LightProjects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-gradient">Featured Projects</h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Showcase of innovative projects in AI/ML, full-stack development, and data analytics
           </p>
         </motion.div>
@@ -152,7 +152,7 @@ export default function LightProjects() {
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-white/60 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -174,7 +174,7 @@ export default function LightProjects() {
                   >
                     <div className="pt-4 border-t border-gray-700 space-y-2">
                       {project.details.map((detail, idx) => (
-                        <p key={idx} className="text-sm text-gray-400 flex items-start gap-2">
+                        <p key={idx} className="text-sm text-white/60 flex items-start gap-2">
                           <span className="text-yellow-400 mt-1">•</span>
                           {detail}
                         </p>
@@ -243,7 +243,7 @@ export default function LightProjects() {
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-white/60 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -265,7 +265,7 @@ export default function LightProjects() {
                   >
                     <div className="pt-4 border-t border-gray-700 space-y-2">
                       {project.details.map((detail, idx) => (
-                        <p key={idx} className="text-sm text-gray-400 flex items-start gap-2">
+                        <p key={idx} className="text-sm text-white/60 flex items-start gap-2">
                           <span className="text-yellow-400 mt-1">•</span>
                           {detail}
                         </p>

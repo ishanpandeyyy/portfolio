@@ -58,17 +58,17 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             About Me
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-white/80 leading-relaxed mb-6">
               Hi, I&apos;m Ishan Pandey — a Computer Science Engineer specializing in AI and Machine Learning, researcher, and tech enthusiast passionate about building intelligent systems that solve real-world problems. My interests span across artificial intelligence, machine learning, Linux systems, algorithmic trading, and modern software development.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-white/80 leading-relaxed mb-6">
               As a researcher, I&apos;ve also contributed to published research work in the field of technology and innovation, reflecting my passion for exploring advanced concepts and turning ideas into impactful solutions.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-white/80 leading-relaxed">
               I enjoy combining logic, creativity, and data to develop meaningful projects, from AI-powered applications to analytical trading systems. Beyond technology, I&apos;m deeply connected to music and creativity — whether analyzing market trends, experimenting with new ideas, or playing the electric guitar and piano, I&apos;m always driven by curiosity and continuous growth.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function About() {
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-600 transition-colors duration-300">
                   {skill.category}
                 </h3>
 

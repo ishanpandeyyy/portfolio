@@ -112,10 +112,10 @@ export default function Certifications() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Certifications
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Professional certifications and specialized courses that demonstrate my commitment to continuous learning
             and expertise in various domains.
           </p>
@@ -145,25 +145,25 @@ export default function Certifications() {
                   >
                     <Award className="w-6 h-6 text-white" />
                   </motion.div>
-                  <motion.div className="flex items-center text-sm text-gray-700 font-medium">
+                  <motion.div className="flex items-center text-sm text-white/80 font-medium">
                     <Calendar className="w-4 h-4 mr-1" />
                     {cert.date}
                   </motion.div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-600 transition-colors duration-300">
                   {cert.title}
                 </h3>
 
                 <div className="mb-3">
                   <p className="text-blue-600 font-semibold">{cert.issuer}</p>
-                  <p className="text-gray-600 text-sm">Instructor: {cert.instructor}</p>
+                  <p className="text-white/70 text-sm">Instructor: {cert.instructor}</p>
                 </div>
 
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed">{cert.description}</p>
+                <p className="text-white/80 mb-4 text-sm leading-relaxed">{cert.description}</p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-800 mb-2">Course Content:</h4>
+                  <h4 className="text-sm font-semibold text-white mb-2">Course Content:</h4>
                   <div className="space-y-1">
                     {cert.courses.map((course, courseIndex) => (
                       <motion.div
@@ -171,7 +171,7 @@ export default function Certifications() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                         transition={{ duration: 0.5, delay: index * 0.1 + courseIndex * 0.05 }}
-                        className="text-sm text-gray-700 flex items-start"
+                        className="text-sm text-white/80 flex items-start"
                       >
                         <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         {course}
@@ -180,9 +180,9 @@ export default function Certifications() {
                   </div>
                 </div>
 
-                {cert.credits && <p className="text-sm text-gray-700 mb-2">Credits: {cert.credits}</p>}
+                {cert.credits && <p className="text-sm text-white/80 mb-2">Credits: {cert.credits}</p>}
 
-                {cert.rollNo && <p className="text-sm text-gray-700 mb-4">Roll No: {cert.rollNo}</p>}
+                {cert.rollNo && <p className="text-sm text-white/80 mb-4">Roll No: {cert.rollNo}</p>}
 
                 {cert.verifyUrl && (
                   <motion.a

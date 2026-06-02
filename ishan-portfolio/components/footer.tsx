@@ -32,7 +32,7 @@ export default function Footer() {
           >
             <span className="text-gradient">Connect & Collaborate</span>
           </motion.h3>
-          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             Ready to build something extraordinary? Reach out and let's create intelligent solutions together.
           </p>
 
@@ -69,10 +69,10 @@ export default function Footer() {
             transition={{ delay: 0.4 }}
             className="space-y-2"
           >
-            <p className="text-gray-700">
+            <p className="text-white/80">
               © 2025 Ishan Pandey. Built with <span className="text-cyan-400 font-semibold">Next.js</span>, <span className="text-cyan-400 font-semibold">Tailwind CSS</span>, and <span className="text-cyan-400 font-semibold">Framer Motion</span>.
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-white/60 text-sm">
               Crafted with <span className="text-pink-500">♡</span> for innovation, clean code, and unforgettable user experiences.
             </p>
           </motion.div>
@@ -87,15 +87,15 @@ export default function Footer() {
         >
           <div>
             <p className="text-2xl font-bold text-cyan-400">12</p>
-            <p className="text-xs text-gray-400 mt-1">Levels Achieved</p>
+            <p className="text-xs text-white/60 mt-1">Levels Achieved</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-cyan-400">15+</p>
-            <p className="text-xs text-gray-400 mt-1">Projects Built</p>
+            <p className="text-xs text-white/60 mt-1">Projects Built</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-cyan-400">0%</p>
-            <p className="text-xs text-gray-400 mt-1">Limitation</p>
+            <p className="text-xs text-white/60 mt-1">Limitation</p>
           </div>
         </motion.div>
       </div>

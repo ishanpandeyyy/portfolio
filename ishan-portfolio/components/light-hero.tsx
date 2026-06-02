@@ -49,13 +49,7 @@ export default function LightHero() {
           animate="visible"
           className="text-center space-y-8"
         >
-          {/* Gold accent badge */}
-          <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/10">
-              <Zap className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm font-bold text-yellow-400">Arcade Developer Portfolio</span>
-            </div>
-          </motion.div>
+
 
           {/* Main heading with gold */}
           <motion.div variants={itemVariants} className="space-y-4">
@@ -70,7 +64,7 @@ export default function LightHero() {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-yellow-200 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Researcher • Developer • Cloud Systems • Trading Algorithms • Linux Specialist
           </motion.p>
@@ -78,7 +72,7 @@ export default function LightHero() {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed"
           >
             Building intelligent systems that solve real-world problems. Passionate about AI research, elegant code, and continuous innovation.
           </motion.p>
@@ -111,15 +105,15 @@ export default function LightHero() {
           >
             <div className="space-y-2">
               <p className="text-3xl md:text-4xl font-bold text-yellow-400">5+</p>
-              <p className="text-sm text-gray-400">Projects Built</p>
+              <p className="text-sm text-white/70">Projects Built</p>
             </div>
             <div className="space-y-2">
               <p className="text-3xl md:text-4xl font-bold text-yellow-400">6+</p>
-              <p className="text-sm text-gray-400">Certifications</p>
+              <p className="text-sm text-white/70">Certifications</p>
             </div>
             <div className="space-y-2">
               <p className="text-3xl md:text-4xl font-bold text-yellow-400">15+</p>
-              <p className="text-sm text-gray-400">Tech Skills</p>
+              <p className="text-sm text-white/70">Tech Skills</p>
             </div>
           </motion.div>
         </motion.div>

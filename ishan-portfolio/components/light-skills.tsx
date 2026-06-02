@@ -91,10 +91,10 @@ export default function LightSkills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Comprehensive technical skills spanning AI/ML, full-stack development, data science, and cloud infrastructure
           </p>
         </motion.div>
@@ -112,14 +112,14 @@ export default function LightSkills() {
               className="card p-6 group hover:shadow-lg"
             >
               {/* Icon badge */}
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <div className="text-blue-600">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-yellow-500/30">
+                <div className="text-yellow-400">
                   {skill.icon}
                 </div>
               </div>
 
               {/* Title and category */}
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-white mb-2">
                 {skill.name}
               </h3>
               <span className={`inline-block badge ${skill.badgeColor} mb-4`}>
@@ -127,7 +127,7 @@ export default function LightSkills() {
               </span>
 
               {/* Description */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
                 {skill.description}
               </p>
 
@@ -141,12 +141,12 @@ export default function LightSkills() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 p-8 card bg-gradient-to-br from-blue-50 to-purple-50"
+          className="mt-16 p-8 card bg-slate-800/50 border border-yellow-500/20"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Tech Stack Overview</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">Tech Stack Overview</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-3 uppercase">Programming Languages</p>
+              <p className="text-sm font-semibold text-yellow-400 mb-3 uppercase">Programming Languages</p>
               <div className="flex flex-wrap gap-2">
                 {['Python', 'JavaScript', 'C++', 'Bash'].map((tech) => (
                   <span key={tech} className="badge badge-blue text-xs">
@@ -156,7 +156,7 @@ export default function LightSkills() {
               </div>
             </div>
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-3 uppercase">AI/ML Frameworks</p>
+              <p className="text-sm font-semibold text-yellow-400 mb-3 uppercase">AI/ML Frameworks</p>
               <div className="flex flex-wrap gap-2">
                 {['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI'].map((tech) => (
                   <span key={tech} className="badge badge-purple text-xs">
@@ -166,7 +166,7 @@ export default function LightSkills() {
               </div>
             </div>
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-3 uppercase">Cloud & DevOps</p>
+              <p className="text-sm font-semibold text-yellow-400 mb-3 uppercase">Cloud & DevOps</p>
               <div className="flex flex-wrap gap-2">
                 {['Google Cloud', 'AWS', 'Docker', 'Kubernetes'].map((tech) => (
                   <span key={tech} className="badge badge-green text-xs">
@@ -176,7 +176,7 @@ export default function LightSkills() {
               </div>
             </div>
             <div>
-              <p className="text-sm font-semibold text-gray-600 mb-3 uppercase">Databases & Tools</p>
+              <p className="text-sm font-semibold text-yellow-400 mb-3 uppercase">Databases & Tools</p>
               <div className="flex flex-wrap gap-2">
                 {['PostgreSQL', 'MongoDB', 'Git', 'Linux'].map((tech) => (
                   <span key={tech} className="badge badge-yellow text-xs">
